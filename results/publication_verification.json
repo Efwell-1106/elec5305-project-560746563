@@ -8,8 +8,10 @@
   "CalibrationLevels": 9,
   "NumericalGroupsPassed": 8,
   "ReportPDFPages": 12,
-  "ReportSource": "Latest desktop Word report; content unchanged",
-  "ReportPDFVisualReview": "All 12 pages reviewed; no clipping or overlap observed",
-  "Video": "Pending; no video link supplied",
-  "Website": "Local preview inspected; deployment checked separately"
+  "ReportSource": "Latest desktop Word report with a clickable project-video link added",
+  "ReportPDFVisualReview": "Pages 1-11 pixel-identical to previously reviewed report; page 12 with video link reviewed",
+  "Video": "Published author-selected MP4, unchanged",
+  "Website": "Local preview inspected; deployment checked separately",
+  "VideoReleaseURL": "https://github.com/Efwell-1106/elec5305-project-560746563/releases/tag/project-video-2026-11-03",
+  "VideoSHA256": "18bcd67b0fa773d7b7e1c2ab6422c44b4be4c2b620b872df8388a59105424f23"
 }

@@ -7,7 +7,8 @@ Zihang Wang · ELEC5305 · SID 560746563 · 3 November 2026
 [Project website](https://efwell-1106.github.io/elec5305-project-560746563/) ·
 [Project report (PDF)](Report/Project_Report.pdf) ·
 [Project report (Word)](Report/Project_Report.docx) ·
-[Summary Live Script](Analysis/Video_Walkthrough.mlx)
+[Summary Live Script](Analysis/Video_Walkthrough.mlx) ·
+[Project video](https://github.com/Efwell-1106/elec5305-project-560746563/releases/tag/project-video-2026-11-03)
 
 ## Research question and findings
 
@@ -134,7 +135,7 @@ assets/                       Website figures and App screenshots
 Legacy/                       Earlier repository files, retained for provenance
 AI_USAGE_DECLARATION.txt       Disclosed AI assistance
 DATA_PROVENANCE.md             Generation records, recollection and limitations
-VIDEO_STATUS.md                Video status and remaining link work
+VIDEO_STATUS.md                Published video links and file details
 SHA256SUMS.csv                 Checksums for current project files
 ```
 
@@ -145,9 +146,13 @@ README and website are archived there as part of that history.
 
 ## Project video
 
-**Video pending.** The recording/link has not yet been supplied. It will be
-added to this README, the website and the report when ready. The website does
-not present a placeholder as a completed submission.
+[Watch or download the project demonstration](https://github.com/Efwell-1106/elec5305-project-560746563/releases/tag/project-video-2026-11-03) ·
+[Direct MP4 download](https://github.com/Efwell-1106/elec5305-project-560746563/releases/download/project-video-2026-11-03/Project_Demonstration.mp4)
+
+Duration: approximately 9 minutes 48 seconds. The author-selected file was
+uploaded unchanged, with no editing or transcoding. The MP4 uses HEVC video;
+if in-browser playback is unavailable, download it and open it in a compatible
+player. The Release attachment keeps the large video outside the Git history.
 
 ## References and software sources
 
