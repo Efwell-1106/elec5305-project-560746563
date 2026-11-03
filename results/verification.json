@@ -1,0 +1,18 @@
+{
+  "Status": "Passed",
+  "CheckedAt": "2026-11-03T05:54:54+11:00",
+  "MATLABVersion": "26.1.0.3312084 (R2026a) Update 4",
+  "LibraryFiles": 15,
+  "CalibrationLevels": 9,
+  "NumericalGroupsPassed": 8,
+  "CopiedPackageExperimentRun": "Passed with a clean MATLAB search path; subsequent rubric revision changes documentation and comments only; executable source matched the tested version",
+  "PackagedAppCodeCheck": "Exact MLAPP code, renamed in a temporary copy, loaded local demo and passed brightness/reset",
+  "SavedLiveScriptOutputs": "Present; successful completion verified",
+  "PDFPages": {
+    "ELEC5305_Project_Report_Final.pdf": 10,
+    "Experiment_Live.pdf": 9
+  },
+  "PDFVisualReview": "All pages inspected",
+  "Language": "English; Chinese guide and path-bearing preview removed; remaining documentation translated",
+  "AIDisclosure": "Statement included at the end of both reports and the README files, with a standalone declaration"
+}

@@ -1,0 +1,10 @@
+# Local working files and generated runtime state
+*.asv
+*.m~
+~$*
+.DS_Store
+Thumbs.db
+analysis_workspace.mat
+__pycache__/
+.env
+.env.*

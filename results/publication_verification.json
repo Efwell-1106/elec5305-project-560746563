@@ -1,0 +1,15 @@
+{
+  "Status": "Passed",
+  "CheckedAt": "2026-11-03T17:48:41.554489+11:00",
+  "MATLABVersion": "26.1.0.3312084 (R2026a) Update 4",
+  "FullExperimentRun": "Passed from publication root",
+  "SummaryAnalysisRun": "Passed from publication root",
+  "LibraryFiles": 15,
+  "CalibrationLevels": 9,
+  "NumericalGroupsPassed": 8,
+  "ReportPDFPages": 12,
+  "ReportSource": "Latest desktop Word report; content unchanged",
+  "ReportPDFVisualReview": "All 12 pages reviewed; no clipping or overlap observed",
+  "Video": "Pending; no video link supplied",
+  "Website": "Local preview inspected; deployment checked separately"
+}

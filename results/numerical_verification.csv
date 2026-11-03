@@ -1,0 +1,9 @@
+Test,Passed,Message
+testIdentityAndSymmetry,1,Passed
+testNormalizedOutput,1,Passed
+testToneAnalysis,1,Passed
+testSilenceAndShortInput,1,Passed
+testCalibration,1,Passed
+testDisplayDecimation,1,Passed
+testOptionalPitchTimebase,1,Passed
+testSynthesis,1,Passed

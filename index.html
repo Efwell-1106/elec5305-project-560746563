@@ -1,35 +1,65 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Controllable Music Generation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Music Feature Lab: a MATLAB App and a reproducible acoustic audit of Bright and Dark music-generation prompts. ELEC5305 project by Zihang Wang.">
+  <meta name="theme-color" content="#142d37">
+  <title>Music Feature Lab · Zihang Wang · ELEC5305</title>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-
 <body>
-
-<h1>Controllable Music Generation Based on Musical Features</h1>
-
-<h2>Project Overview</h2>
-
-<p>
-This project aims to develop an interactive audio simulator
-using MATLAB and MATLAB App Designer.
-</p>
-
-<h2>Project Features</h2>
-
-    
-<ul>
-    <li>Interactive audio parameter control</li>
-    <li>Real-time audio feedback</li>
-    <li>Time-domain waveform</li>
-    <li>Frequency spectrum</li>
-    <li>Spectral centroid</li>
-    <li>Spectrogram</li>
-</ul>
-
-<h2>Author</h2>
-
-<p>Zihang Wang</p>
-
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><a class="brand" href="#">MFL<span>Music Feature Lab</span></a>
+    <nav aria-label="Main navigation"><a href="#study">Study</a><a href="#results">Results</a><a href="#app">App</a><a href="#downloads">Downloads</a><a href="#video">Video</a></nav>
+    <a class="repository" href="https://github.com/Efwell-1106/elec5305-project-560746563">GitHub ↗</a>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy"><p class="eyebrow">ELEC5305 / AUDIO SIGNAL PROCESSING</p>
+        <h1>From brightness<br>prompts to<br><em>measured sound.</em></h1>
+        <p class="lead">An acoustic audit of AI-generated music, with an integrated MATLAB App for processing, listening and analysis.</p>
+        <p class="author">Zihang Wang <span>·</span> SID 560746563 <span>·</span> 3 November 2026</p>
+        <div class="actions"><a class="button primary" href="Report/Project_Report.pdf">Read the report <span>↗</span></a><a class="button secondary" href="#results">Explore the findings <span>↓</span></a></div>
+      </div>
+      <div class="hero-panel"><div class="window-bar"><span></span><span></span><span></span><p>Music Feature Lab / MATLAB App</p></div><a href="assets/app_preview.png" aria-label="Open full MATLAB App screenshot"><img src="assets/app_preview.png" alt="Integrated Music Feature Lab interface showing audio analysis and processing controls" width="1400" height="880"></a><div class="panel-foot"><span class="status-dot"></span> Offline analysis · retained audio · shared measurement code</div></div>
+    </section>
+    <div class="metrics wrap" aria-label="Experiment scope"><div><strong>15</strong><span>generated recordings</span></div><div><strong>5</strong><span>matched seed triplets</span></div><div><strong>9</strong><span>DSP parameter settings</span></div><div><strong>1</strong><span>musical context</span></div></div>
+    <section id="study" class="section wrap"><div class="section-heading"><p class="eyebrow">01 / THE STUDY</p><h2>Does the requested change<br>appear in the measurements?</h2></div>
+      <p class="intro">For one instrumental electronic-music prompt family, do Bright and Dark instructions produce consistent acoustic changes across matched seeds? Do other, unrequested attributes change too?</p>
+      <div class="two-cols"><article class="method"><span class="number">A</span><h3>A fixed-signal DSP reference</h3><p>Apply a symmetric FFT-domain spectral tilt to the same recording, from −1 to +1 in steps of 0.25. Recompute the descriptors after processing.</p><p class="note">An engineering reference for measurable spectral change. No equal perceptual spacing is assumed.</p></article><article class="method"><span class="number">B</span><h3>A paired generated-music audit</h3><p>Compare Neutral, Bright and Dark recordings for each of five shared seeds: 12315, 12325, 12335, 12345 and 12355. Measure target and other descriptors consistently.</p><p class="note">ACE-Step audio; exact installed version unverified. Generation controls are based on the author's recollection.</p></article></div>
+    </section>
+    <section id="results" class="results section"><div class="wrap"><div class="section-heading"><p class="eyebrow">02 / WHAT THE DATA SHOW</p><h2>A repeatable DSP response.<br>A less consistent prompt response.</h2></div>
+      <div class="finding-grid"><article><p class="finding-value">1<span>/5</span></p><h3>Bright raised centroid</h3><p>Only one Bright recording had a higher centroid than its matched Neutral.</p></article><article><p class="finding-value">5<span>/5</span></p><h3>Dark lowered centroid</h3><p>The direction was consistent, but one decrease was only about 0.52 Hz.</p></article><article><p class="finding-value">2<span>/5</span></p><h3>HF ratio followed direction</h3><p>Each prompt condition matched its expected HF-ratio direction in two pairs.</p></article></div>
+      <figure class="chart"><a href="assets/paired_centroid.png"><img src="assets/paired_centroid.png" alt="MATLAB plots of centroid by seed and Bright-minus-Neutral and Dark-minus-Neutral paired differences" width="704" height="303" loading="lazy"></a><figcaption><strong>Figure 1.</strong> Centroid values and changes from the same-seed Neutral recording. Positive changes are expected for Bright; negative changes for Dark. Click a figure to open its original image.</figcaption></figure>
+      <div class="result-prose"><h3>Requested changes are only part of the question.</h3><p>RMS, spectral flux and detected onset rate also varied. Their paired-change SDs exceeded the magnitudes of their mean changes. This sample does not establish selective control of brightness while preserving other attributes.</p></div>
+      <figure class="chart"><a href="assets/paired_descriptors.png"><img src="assets/paired_descriptors.png" alt="Target and other descriptor mean paired changes with one sample standard deviation error bars, divided by Neutral cross-seed standard deviation" width="704" height="303" loading="lazy"></a><figcaption><strong>Figure 2.</strong> Paired changes divided by Neutral's cross-seed SD. Bars show means; error bars show ±1 sample SD of five paired changes. Dotted ±1 lines are descriptive references, not significance thresholds. RMS is not perceived loudness; onset rate is not tempo.</figcaption></figure>
+      <div class="limits"><h3>What this pilot cannot establish</h3><p>One context and five seeds do not support a general claim about all generators. Complete generation logs and the exact model version were not retained. Exploratory pitch estimates accumulated near their upper search boundary and were excluded. No listening study, causal mechanism or statistical significance is claimed.</p><a href="DATA_PROVENANCE.md">Read the provenance and limitations ↗</a></div>
+    </div></section>
+    <section id="app" class="section wrap"><div class="section-heading"><p class="eyebrow">03 / THE IMPLEMENTATION</p><h2>One App.<br>A shared analysis pipeline.</h2></div><p class="intro">Import a recording, inspect it, apply the DSP reference and analyze the retained library. The App works with existing audio; it does not invoke a music-generation model.</p>
+      <div class="app-features"><article><span>01</span><h3>Audio Workbench</h3><p>Original and processed playback, waveform, FFT, STFT and acoustic descriptors.</p></article><article><span>02</span><h3>Brightness Experiment</h3><p>A nine-setting sweep with plots and a measurement table for the current recording.</p></article><article><span>03</span><h3>Music Library</h3><p>Batch measurements and descriptive condition summaries for all 15 recordings.</p></article><article><span>04</span><h3>FM Synth & Methods</h3><p>An optional test-tone generator and concise method notes. Separate from the prompt audit.</p></article></div>
+      <figure class="app-shot"><a href="assets/brightness_preview.png"><img src="assets/brightness_preview.png" alt="Brightness Experiment page showing the nine-level calibration interface" width="1400" height="880" loading="lazy"></a><figcaption>Offline brightness processing with a reproducible parameter sweep.</figcaption></figure>
+      <div class="run-block"><div><p class="eyebrow">RUN LOCALLY</p><h3>Download. Extract. Open in MATLAB.</h3><p>Prepared in MATLAB R2026a Update 4. Core analysis requires no optional toolboxes; optional pitch uses Audio Toolbox.</p></div><pre><code>run_project            % Launch the App
+run_experiments        % Recompute audio measurements
+run_summary_analysis   % Plot supplied paired measurements</code></pre></div>
+    </section>
+    <section class="samples section"><div class="wrap"><div class="section-heading"><p class="eyebrow">04 / RETAINED AUDIO</p><h2>Hear one matched seed.</h2></div><p class="intro">Seed 12315, three conditions. These examples support demonstration; they are not a controlled, level-matched listening test.</p><div class="audio-grid">
+      <article><h3>Neutral</h3><p>Baseline condition · seed 12315</p><audio controls preload="none" aria-label="Neutral generated recording, seed 12315"><source src="MusicFeatureLab/data/music%20library/Neutral/neutral_12315.wav" type="audio/wav">Your browser does not support audio playback.</audio></article>
+      <article><h3>Bright</h3><p>Requested brighter timbre · seed 12315</p><audio controls preload="none" aria-label="Bright generated recording, seed 12315"><source src="MusicFeatureLab/data/music%20library/Bright/bright_12315.wav" type="audio/wav">Your browser does not support audio playback.</audio></article>
+      <article><h3>Dark</h3><p>Requested darker timbre · seed 12315</p><audio controls preload="none" aria-label="Dark generated recording, seed 12315"><source src="MusicFeatureLab/data/music%20library/Dark/dark_12315.wav" type="audio/wav">Your browser does not support audio playback.</audio></article>
+    </div></div></section>
+    <section id="downloads" class="section wrap"><div class="section-heading"><p class="eyebrow">05 / PROJECT MATERIALS</p><h2>Read, inspect and reproduce.</h2></div><div class="download-grid">
+      <a class="download" href="Report/Project_Report.pdf"><span class="file-type">PDF</span><div><h3>Written project report</h3><p>The latest saved Word report, exported to PDF.</p></div><span aria-hidden="true">↗</span></a>
+      <a class="download" href="Report/Project_Report.docx"><span class="file-type">DOCX</span><div><h3>Editable report</h3><p>Methods, results, discussion and limitations.</p></div><span aria-hidden="true">↓</span></a>
+      <a class="download" href="Analysis/Video_Walkthrough.mlx"><span class="file-type">MLX</span><div><h3>Summary analysis</h3><p>Paired plots, saved outputs and interpretation.</p></div><span aria-hidden="true">↓</span></a>
+      <a class="download" href="Report/Experiment_Live.mlx"><span class="file-type">MLX</span><div><h3>Full experimental Live Script</h3><p>Recompute the baseline measurements from WAV files.</p></div><span aria-hidden="true">↓</span></a>
+      <a class="download" href="results/library_features.csv"><span class="file-type">CSV</span><div><h3>File-level measurements</h3><p>All 15 recordings, conditions and filename seeds.</p></div><span aria-hidden="true">↓</span></a>
+      <a class="download" href="results/prompt_effect_summary.csv"><span class="file-type">CSV</span><div><h3>Paired prompt summary</h3><p>Target and other descriptor changes from Neutral.</p></div><span aria-hidden="true">↓</span></a>
+    </div><div class="actions"><a class="button primary" href="https://github.com/Efwell-1106/elec5305-project-560746563/archive/refs/heads/main.zip">Download the full repository <span>↓</span></a><a class="text-link" href="https://github.com/Efwell-1106/elec5305-project-560746563#readme">Running instructions ↗</a></div></section>
+    <section id="video" class="video-section"><div class="wrap video-inner"><div><p class="eyebrow">06 / PROJECT VIDEO</p><h2>Demonstration video</h2><p>The recording and its verified link will be added here when supplied.</p></div><span class="pending">Video pending</span></div></section>
+    <section class="section wrap acknowledgment"><h2>Contribution and AI assistance</h2><p>The author selected the topic, ran the original generation and wrote the original MATLAB code with AI guidance. ChatGPT and OpenAI Codex assisted experimental design, code development and integration, analysis interpretation, report drafting and language editing. Codex also assisted this website and repository update. ACE-Step generated the experimental audio. Exact historical model versions were not retained.</p><a href="AI_USAGE_DECLARATION.txt">Report AI declaration ↗</a><span> · </span><a href="DATA_PROVENANCE.md">Data provenance ↗</a><p class="note">The report, code and current findings remain subject to the author's final review. The video is still outstanding.</p></section>
+  </main>
+  <footer class="footer wrap"><p><strong>MFL</strong> Music Feature Lab</p><p>Zihang Wang · ELEC5305 · 2026</p><a href="#">Back to top ↑</a></footer>
+  <script src="assets/site.js"></script>
 </body>
 </html>
